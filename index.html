@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nuñez y Asociados — Estudio Jurídico | Zona Norte</title>
+  <meta name="description" content="Estudio jurídico Nuñez y Asociados en Zona Norte. Especialistas en Familia, Salud (Obras Sociales) y Civil. Atención online o en café a convenir. Tel: 11 6300-7805. Email: fabi_nunez3@yahoo.com.ar">
+  <style>
+    :root{--brand:#0f172a;--accent:#c5a14e;--bg:#f8fafc;--text:#0b1220;--muted:#64748b;--card:#ffffff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif;color:var(--text);
+      background: var(--bg) url('607272cac99fa41508d0f6aec5dce327.jpg') no-repeat center 140px fixed;
+      background-size: 520px auto;background-attachment: fixed;background-blend-mode: lighten;}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.9);backdrop-filter:saturate(120%) blur(6px);border-bottom:1px solid #e5e7eb}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand .logotype{display:flex;align-items:center;gap:10px}
+    .brand small{color:var(--muted);font-weight:500}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{color:var(--muted);font-weight:600} nav a:hover{color:var(--text)}
+    .cta{display:flex;gap:10px;align-items:center}
+    .btn{padding:10px 14px;border-radius:10px;border:1px solid #e5e7eb;background:#fff;font-weight:700;cursor:pointer}
+    .btn.primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+    .btn.outline{background:#fff;color:var(--brand);border-color:var(--brand)}
+    .btn.inline{padding:8px 12px;border-radius:999px;border:1px solid var(--brand);background:#fff;color:var(--brand);font-weight:700}
+    .btn.inline:hover{background:var(--brand);color:#fff}
+    .section{padding:38px 0}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:var(--card);border:1px solid #e5e7eb;border-radius:14px;padding:20px;height:100%}
+    .card h3{margin:10px 0 8px}
+    .card p{color:var(--muted);margin:0}
+    .hero{background:rgba(255,255,255,0.88);padding:60px 0 30px;border-radius:12px}
+    .section,.footer{background:rgba(255,255,255,0.88);border-radius:12px;margin:20px 0}
+    .hero-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:30px;align-items:center}
+    .hero img{width:220px;height:220px;object-fit:cover;border-radius:50%;border:4px solid var(--accent);box-shadow:0 4px 10px rgba(0,0,0,0.2)}
+    .hero h1{font-size:clamp(28px,3vw,40px);margin:0 0 12px;color:var(--brand);line-height:1.1}
+    .hero p{color:var(--muted);font-size:18px;margin:0 0 18px}
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 18px}
+    .badge{border:1px solid #e5e7eb;border-radius:999px;padding:8px 12px;font-weight:700;background:#fff}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    #sobre-mi .intro{max-width:760px;color:var(--muted)}
+    .timeline{position:relative;margin-top:18px}
+    .timeline::before{content:"";position:absolute;left:14px;top:0;bottom:0;width:2px;background:#e5e7eb}
+    .t-item{position:relative;display:grid;grid-template-columns:auto 1fr;gap:14px;padding:12px 0}
+    .t-dot{width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid #fff;box-shadow:0 0 0 2px #e5e7eb;margin-top:6px}
+    .t-meta{font-weight:700;color:var(--brand)} .t-role{margin:2px 0 6px} .t-desc{color:var(--muted);margin:0}
+    .accordion{margin-top:12px;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden}
+    .acc-head{background:#fff;display:flex;justify-content:space-between;align-items:center;padding:12px 14px;cursor:pointer}
+    .acc-head h4{margin:0;font-size:16px} .acc-body{display:none;padding:12px 14px;background:#fafafa;border-top:1px solid #e5e7eb}
+    .acc-body.open{display:block}
+    #trayectoria-box{display:none;margin-top:16px;border:1px solid #e5e7eb;border-radius:14px;background:#fff;padding:18px;box-shadow:0 8px 30px rgba(0,0,0,0.08);scroll-margin-top:90px;animation:fadeSlide .35s ease-out}
+    @keyframes fadeSlide{from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)}}
+    .box-actions{display:flex;justify-content:flex-end;gap:10px;margin-bottom:8px}
+
+    /* Opiniones */
+    .reviews-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+    .reviews-card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:18px}
+    .reviews-meta{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+    .stars{display:inline-flex;gap:4px}
+    .star{font-size:20px;user-select:none;line-height:1}
+    .star.dim{opacity:.35}
+    .avg{font-weight:700}
+    .quote{font-size:17px;color:var(--text);line-height:1.5;margin:8px 0 4px}
+    .author{color:var(--muted);font-size:14px}
+    .small{color:var(--muted);font-size:12px}
+    .reviews-form .star{font-size:24px;cursor:pointer}
+    .review-success{display:none;margin-top:8px;color:#166534;background:#dcfce7;border:1px solid #bbf7d0;padding:8px 10px;border-radius:10px}
+    .reply{margin-top:10px;padding:10px;border-left:3px solid var(--accent);background:#fafaf9;border-radius:10px}
+    .reply .by{font-weight:700;color:var(--brand);margin-bottom:4px}
+    .admin-bar{display:flex;gap:8px;align-items:center;justify-content:space-between;margin-bottom:8px}
+    .admin-hint{font-size:12px;color:var(--muted)}
+    .reply-form{display:none;margin-top:10px}
+    .reply-form textarea{width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:10px}
+    .reply-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:8px}
+    @media (max-width:900px){.reviews-wrap{grid-template-columns:1fr}}
+    .footer{padding:30px 0;border-top:1px solid #e5e7eb;color:var(--muted)}
+    @media (max-width:900px){.hero-inner{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}.contact{grid-template-columns:1fr}.timeline::before{left:10px}.t-item{grid-template-columns:auto 1fr}}
+    a:focus,button:focus,input:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:2px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logotype">
+          <svg width="34" height="34" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <rect x="30" y="12" width="4" height="36" fill="var(--brand)"></rect>
+            <rect x="20" y="16" width="24" height="4" fill="var(--brand)"></rect>
+            <line x1="24" y1="20" x2="18" y2="36" stroke="var(--brand)" stroke-width="3"></line>
+            <line x1="40" y1="20" x2="46" y2="36" stroke="var(--brand)" stroke-width="3"></line>
+            <path d="M12 36 q6 10 12 0" stroke="var(--brand)" stroke-width="3" fill="none"></path>
+            <path d="M40 36 q6 10 12 0" stroke="var(--brand)" stroke-width="3" fill="none"></path>
+            <rect x="20" y="50" width="24" height="4" fill="var(--brand)"></rect>
+          </svg>
+          <div>
+            <div style="font-size:18px;line-height:1;">Nuñez y Asociados</div>
+            <small>Estudio Jurídico — Zona Norte</small>
+          </div>
+        </div>
+      </div>
+      <nav aria-label="Principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#areas">Áreas</a></li>
+          <li><a href="#modalidades">Modalidades</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="cta">
+        <a class="btn primary" href="https://wa.me/541163007805">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div style="text-align:center;">
+          <img src="fabiana_nunez.jpg" alt="Fabiana Nuñez - Abogada">
+        </div>
+        <div>
+          <h1>Tu asesoría legal, a un clic.</h1>
+          <p>Estudio jurídico liderado por <strong>Fabiana Nuñez</strong>, especializado en <strong>Familia</strong>, <strong>Salud (Obras Sociales)</strong> y <strong>Civil</strong>. Atendemos <strong>online</strong> y podemos coordinar encuentros en café en <strong>Zona Norte</strong>.</p>
+          <div class="badges"><span class="badge">Familia</span><span class="badge">Salud (Obras Sociales)</span><span class="badge">Civil</span><span class="badge">Atención Online</span></div>
+          <div class="actions"><a class="btn primary" href="#contacto">Solicitar consulta</a><a class="btn outline" href="mailto:fabi_nunez3@yahoo.com.ar">Escribir Email</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="section">
+      <div class="container">
+        <h2>Sobre mí</h2>
+        <p class="intro">
+          Más de tres décadas de práctica jurídica combinando gestión pública, trabajo en estudio privado, docencia y patrocinio jurídico gratuito.
+          A continuación, mi <strong>trayectoria</strong> resumida.
+          <button id="btn-trayectoria" class="btn inline" type="button" aria-controls="trayectoria-box" aria-expanded="false">Ver trayectoria</button>
+        </p>
+
+        <div id="trayectoria-box">
+          <div class="box-actions"><button id="btn-cerrar" class="btn" type="button" aria-controls="trayectoria-box">Cerrar ✕</button></div>
+          <div class="timeline" id="timeline"></div>
+          <div class="accordion" id="tray-accordion">
+            <div class="acc-head" data-acc="detalle"><h4>Ver detalle de roles y funciones</h4><span aria-hidden="true">▾</span></div>
+            <div class="acc-body" id="acc-detalle"><ul id="detalle-list" style="margin:0;padding-left:18px;"></ul></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPINIONES -->
+    <section id="opiniones" class="section">
+      <div class="container">
+        <h2>Opiniones de clientes</h2>
+        <div class="reviews-wrap">
+          <!-- Panel: promedio + carrusel -->
+          <div class="reviews-card" id="reviews-panel">
+            <div class="admin-bar">
+              <div class="admin-hint">Promedio y carrusel de opiniones</div>
+              <button id="admin-btn" class="btn outline" type="button">Modo admin</button>
+            </div>
+            <div class="reviews-meta">
+              <div class="stars" id="avg-stars" aria-label="Promedio de puntuación"></div>
+              <div class="avg" id="avg-text">0.0</div>
+              <div class="small" id="count-text">— 0 opiniones</div>
+            </div>
+            <div class="quote" id="quote-text">Aún no hay opiniones. ¡Sé el primero en dejar la tuya!</div>
+            <div class="author" id="quote-author"></div>
+            <div class="small" id="quote-date"></div>
+
+            <!-- Respuesta del estudio (se muestra si existe) -->
+            <div id="reply-block" class="reply" style="display:none;">
+              <div class="by">Respuesta del estudio</div>
+              <div id="reply-text-show"></div>
+              <div class="small" id="reply-date-show"></div>
+            </div>
+
+            <!-- Formulario de respuesta (solo admin) -->
+            <div id="reply-form" class="reply-form">
+              <textarea id="reply-text" rows="3" placeholder="Escribí tu respuesta para esta opinión..."></textarea>
+              <div class="reply-actions">
+                <button id="reply-send" class="btn primary" type="button">Publicar respuesta</button>
+                <button id="rev-del" class="btn" type="button" title="Eliminar esta opinión">Borrar opinión</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel: dejar opinión -->
+          <div class="reviews-card">
+            <form class="reviews-form" id="review-form">
+              <label for="rev-name">Tu nombre (opcional)</label>
+              <input id="rev-name" type="text" placeholder="Ej: María" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:10px;margin:6px 0 10px">
+
+              <label>Tu puntuación</label>
+              <div class="stars" id="input-stars" aria-label="Elegir puntuación" style="margin:6px 0 10px">
+                <span class="star dim" data-v="1">★</span><span class="star dim" data-v="2">★</span><span class="star dim" data-v="3">★</span><span class="star dim" data-v="4">★</span><span class="star dim" data-v="5">★</span>
+              </div>
+
+              <label for="rev-text">Tu comentario</label>
+              <textarea id="rev-text" rows="4" placeholder="¿Cómo fue tu experiencia?" required style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:10px;margin:6px 0 10px"></textarea>
+
+              <button class="btn primary" type="submit" id="rev-submit" disabled>Enviar opinión</button>
+              <div class="review-success" id="rev-ok">¡Gracias! Tu opinión ya está publicada.</div>
+              <div class="small">* Se guarda localmente en tu dispositivo. Para hacerlo público para todos, luego podemos conectarlo a un servicio externo.</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÁREAS -->
+    <section id="areas" class="section">
+      <div class="container">
+        <h2>Áreas de práctica</h2>
+        <div class="grid-3">
+          <article class="card"><h3>Familia</h3><p>Divorcios, régimen de comunicación, alimentos, adopciones y acuerdos extrajudiciales, Etc.</p></article>
+          <article class="card"><h3>Salud (Obras Sociales)</h3><p>Amparos de salud, cobertura de tratamientos y medicamentos, reclamos a obras sociales y prepagas, Etc.</p></article>
+          <article class="card"><h3>Civil y Comercial</h3><p>Suceciones, Juicios ejecutivos, Daños y perjuicio, Etc.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODALIDADES -->
+    <section id="modalidades" class="section" style="background:#fff;border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;">
+      <div class="container">
+        <h2>Modalidades de atención</h2>
+        <div class="grid-3">
+          <div class="card"><h3>Online</h3><p>Consultas por videollamada o teléfono.</p></div>
+          <div class="card"><h3>Presencial</h3><p>Encuentros presenciales en Zona Norte a convenir.</p></div>
+          <div class="card"><h3>Trato cercano</h3><p>Comunicación clara y seguimiento personalizado.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section">
+      <div class="container contact">
+        <div class="card">
+          <h2>Contacto directo</h2>
+          <p><strong>Fabiana Nuñez</strong> — Abogada</p>
+          <p>📍 Zona Norte, Buenos Aires</p>
+          <p>📞 <a href="tel:+541163007805">11 6300-7805</a></p>
+          <p>📧 <a href="mailto:fabi_nunez3@yahoo.com.ar">fabi_nunez3@yahoo.com.ar</a></p>
+          <div class="actions"><a class="btn primary" href="https://wa.me/541163007805">WhatsApp</a><a class="btn outline" href="mailto:fabi_nunez3@yahoo.com.ar">Email</a></div>
+        </div>
+        <div class="card">
+          <h2>Escribinos ahora</h2>
+          <form action="https://formsubmit.co/fabi_nunez3@yahoo.com.ar" method="POST">
+            <input type="text" name="Nombre" placeholder="Tu nombre" required>
+            <input type="email" name="Email" placeholder="tu@email.com" required>
+            <input type="tel" name="Teléfono" placeholder="+54 11 ..." required>
+            <textarea name="Consulta" placeholder="Contanos brevemente tu caso" required></textarea>
+            <input type="hidden" name="_subject" value="Nueva consulta desde el sitio — Nuñez y Asociados">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://example.com/gracias.html">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_autoresponse" value="¡Gracias por tu consulta! Te responderemos a la brevedad. — Nuñez y Asociados">
+            <input type="text" name="_honey" style="display:none">
+            <button class="btn primary" type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Nuñez y Asociados. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* ===== Trayectoria (mostrar/ocultar) ===== */
+    const trayectoria = [
+      { rango: "1989–1992", rol: "Asistente en Estudio Jurídico", entidad: "Dra. Liliana Cejas", detalle: "Tareas de apoyo en gestión de expedientes y escritos." },
+      { rango: "1994–1996", rol: "Asistente en Estudio Jurídico", entidad: "Dr. Ramón Héctor Rodríguez", detalle: "Colaboración en causas civiles y de familia." },
+      { rango: "1996–Actualidad", rol: "Titular", entidad: "Estudio Jurídico propio", detalle: "Dirección integral de casos en familia, salud y laboral." },
+      { rango: "2005–2015", rol: "Abogada externa", entidad: "Secretaría de Salud, Municipalidad de Malvinas Argentinas", detalle: "Gestión de amparos y reclamos de salud (obras sociales/prepagas)." },
+      { rango: "Mayo 2012–2019", rol: "Secretaría", entidad: "Juzgado de Faltas N.º 3 de José C. Paz", detalle: "Tramitación y gestión administrativa de expedientes contravencionales." },
+      { rango: "2016", rol: "Coordinadora", entidad: "Patrocinio Jurídico Gratuito — Delegación José C. Paz (CASM)", detalle: "Coordinación de atención y patrocinio a ciudadanos." },
+      { rango: "2014", rol: "Docente Titular", entidad: "Escuela Vucetich", detalle: "Derecho Contravencional, Derecho Constitucional y Abordaje del Conflicto." },
+      { rango: "2016", rol: "Docente", entidad: "Facultad de Derecho (con Juez Dr. Gustavo Halbide)", detalle: "Docencia en curso de graduados." }
+    ];
+    function renderTrayectoria(){
+      const tl = document.getElementById('timeline');
+      if(tl.dataset.rendered === '1') return;
+      trayectoria.forEach(item => {
+        const wrap = document.createElement('div'); wrap.className = 't-item';
+        const dot = document.createElement('div'); dot.className = 't-dot';
+        const body = document.createElement('div');
+        const meta = document.createElement('div'); meta.className = 't-meta'; meta.textContent = item.rango;
+        const role = document.createElement('div'); role.className = 't-role'; role.innerHTML = `<strong>${item.rol}</strong> — ${item.entidad}`;
+        const desc = document.createElement('p'); desc.className = 't-desc'; desc.textContent = item.detalle;
+        body.appendChild(meta); body.appendChild(role); body.appendChild(desc);
+        wrap.appendChild(dot); wrap.appendChild(body); tl.appendChild(wrap);
+      });
+      tl.dataset.rendered = '1';
+      const detalleList = document.getElementById('detalle-list');
+      trayectoria.forEach(item => { const li = document.createElement('li'); li.innerHTML = `<strong>${item.rol}</strong> (${item.rango}) — ${item.entidad}. ${item.detalle}`; detalleList.appendChild(li); });
+      const head = document.querySelector('.acc-head'); const bodyAcc = document.getElementById('acc-detalle');
+      head.addEventListener('click', () => { bodyAcc.classList.toggle('open'); head.querySelector('span').textContent = bodyAcc.classList.contains('open') ? '▴' : '▾'; });
+    }
+    const box = document.getElementById('trayectoria-box'); const btnOpen = document.getElementById('btn-trayectoria'); const btnClose = document.getElementById('btn-cerrar');
+    btnOpen.addEventListener('click', () => { renderTrayectoria(); box.style.display='block'; btnOpen.setAttribute('aria-expanded','true'); box.scrollIntoView({behavior:'smooth',block:'start'}); });
+    btnClose.addEventListener('click', () => { box.style.display='none'; btnOpen.setAttribute('aria-expanded','false'); document.getElementById('sobre-mi').scrollIntoView({behavior:'smooth', block:'start'}); });
+
+    /* ===== Opiniones + Devolución (sin backend) ===== */
+    (() => {
+      const KEY = 'nyas_reviews_v2';
+      const ADMIN_PIN = '0402'; // <- Cambiá el PIN aquí
+
+      const load = () => { try{ const raw = localStorage.getItem(KEY); return raw? JSON.parse(raw): []; } catch { return []; } };
+      const save = (arr) => localStorage.setItem(KEY, JSON.stringify(arr));
+
+      const avgStars = document.getElementById('avg-stars');
+      const avgText = document.getElementById('avg-text');
+      const countText = document.getElementById('count-text');
+      const quoteText = document.getElementById('quote-text');
+      const quoteAuthor = document.getElementById('quote-author');
+      const quoteDate = document.getElementById('quote-date');
+
+      const form = document.getElementById('review-form');
+      const nameI = document.getElementById('rev-name');
+      const textI = document.getElementById('rev-text');
+      const inputStars = document.getElementById('input-stars');
+      const submitBtn = document.getElementById('rev-submit');
+      const okMsg = document.getElementById('rev-ok');
+
+      const adminBtn = document.getElementById('admin-btn');
+      const replyForm = document.getElementById('reply-form');
+      const replyText = document.getElementById('reply-text');
+      const replySend = document.getElementById('reply-send');
+      const replyBlock = document.getElementById('reply-block');
+      const replyTextShow = document.getElementById('reply-text-show');
+      const replyDateShow = document.getElementById('reply-date-show');
+      const delBtn = document.getElementById('rev-del');
+
+      let ratingSel = 0;
+      let reviews = load().slice(0, 400);
+      let idx = 0;
+      let timer;
+      let isAdmin = sessionStorage.getItem('nyas_admin') === '1';
+
+      function renderStars(container, value, max=5) {
+        container.innerHTML = '';
+        for (let i=1; i<=max; i++) {
+          const s = document.createElement('span');
+          s.className = 'star' + (i<=Math.round(value) ? '' : ' dim');
+          s.textContent = '★';
+          container.appendChild(s);
+        }
+      }
+      function calcAvg(arr){ if(!arr.length) return 0; return Math.round((arr.reduce((a,b)=>a+(b.rating||0),0)/arr.length)*10)/10; }
+      function refreshHeader(){
+        const avg = calcAvg(reviews);
+        renderStars(avgStars, avg);
+        avgText.textContent = avg.toFixed(1);
+        countText.textContent = `— ${reviews.length} ${reviews.length===1?'opinión':'opiniones'}`;
+      }
+      function showReview(i){
+        if (!reviews.length){
+          quoteText.textContent = 'Aún no hay opiniones. ¡Sé el primero en dejar la tuya!';
+          quoteAuthor.textContent = ''; quoteDate.textContent = '';
+          replyBlock.style.display = 'none'; replyForm.style.display = isAdmin ? 'block' : 'none';
+          return;
+        }
+        const r = reviews[i % reviews.length];
+        quoteText.textContent = `“${r.text}”`;
+        quoteAuthor.textContent = r.name ? `— ${r.name}` : '— Cliente';
+        quoteDate.textContent = new Date(r.date || Date.now()).toLocaleDateString('es-AR', {year:'numeric', month:'short', day:'2-digit'});
+
+        // Mostrar respuesta si existe
+        if (r.reply && r.reply.text){
+          replyBlock.style.display = 'block';
+          replyTextShow.textContent = r.reply.text;
+          replyDateShow.textContent = new Date(r.reply.date).toLocaleDateString('es-AR', {year:'numeric', month:'short', day:'2-digit'});
+        } else {
+          replyBlock.style.display = 'none';
+        }
+
+        // Form de respuesta solo admin
+        replyForm.style.display = isAdmin ? 'block' : 'none';
+        replyText.value = r.reply?.text || '';
+      }
+      function startAuto(){
+        clearInterval(timer);
+        if (!reviews.length) return;
+        timer = setInterval(() => { idx = (idx + 1) % reviews.length; showReview(idx); }, 6000);
+      }
+      function updateAll(){ refreshHeader(); showReview(idx); startAuto(); }
+
+      // Estrellas del form de usuario
+      inputStars.addEventListener('mousemove', (e) => {
+        if (!e.target.classList.contains('star')) return;
+        const v = Number(e.target.dataset.v);
+        [...inputStars.children].forEach((el,i)=> el.classList.toggle('dim', i+1>v));
+      });
+      inputStars.addEventListener('mouseleave', () => {
+        [...inputStars.children].forEach((el,i)=> el.classList.toggle('dim', i+1>ratingSel));
+      });
+      inputStars.addEventListener('click', (e) => {
+        if (!e.target.classList.contains('star')) return;
+        ratingSel = Number(e.target.dataset.v);
+        [...inputStars.children].forEach((el,i)=> el.classList.toggle('dim', i+1>ratingSel));
+        submitBtn.disabled = !(ratingSel && textI.value.trim().length>=5);
+      });
+      textI.addEventListener('input', () => {
+        submitBtn.disabled = !(ratingSel && textI.value.trim().length>=5);
+      });
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (!ratingSel || textI.value.trim().length<5) return;
+        const entry = {
+          id: Date.now(),
+          name: (nameI.value || '').trim().slice(0,60),
+          text: textI.value.trim().slice(0,600),
+          rating: ratingSel,
+          date: new Date().toISOString().slice(0,10),
+          reply: null
+        };
+        reviews.unshift(entry); save(reviews);
+        okMsg.style.display = 'block'; setTimeout(()=> okMsg.style.display='none', 3000);
+        nameI.value=''; textI.value=''; ratingSel=0; [...inputStars.children].forEach(el=> el.classList.add('dim')); submitBtn.disabled=true;
+        idx = 0; updateAll();
+      });
+
+      // Admin mode
+      function setAdmin(v){ isAdmin = v; sessionStorage.setItem('nyas_admin', v?'1':'0'); adminBtn.textContent = v? 'Admin activo' : 'Modo admin'; updateAll(); }
+      adminBtn.addEventListener('click', () => {
+        if (isAdmin) { setAdmin(false); return; }
+        const pin = prompt('Ingresá el PIN de administrador'); if (pin === ADMIN_PIN) setAdmin(true); else alert('PIN incorrecto');
+      });
+
+      // Publicar respuesta (admin)
+      replySend.addEventListener('click', () => {
+        if (!isAdmin || !reviews.length) return;
+        const txt = replyText.value.trim();
+        if (!txt) { alert('Escribí una respuesta.'); return; }
+        const r = reviews[idx];
+        r.reply = { text: txt.slice(0,800), date: new Date().toISOString() };
+        save(reviews); updateAll();
+      });
+
+      // Borrar opinión (admin)
+      delBtn.addEventListener('click', () => {
+        if (!isAdmin || !reviews.length) return;
+        if (!confirm('¿Borrar esta opinión? Esta acción no se puede deshacer.')) return;
+        reviews.splice(idx,1); if (idx>0) idx--; save(reviews); updateAll();
+      });
+
+      // Hover pausa el carrusel
+      const panel = document.getElementById('reviews-panel');
+      panel.addEventListener('mouseenter', ()=> clearInterval(timer));
+      panel.addEventListener('mouseleave', startAuto);
+
+      // Inicial
+      refreshHeader(); showReview(0); startAuto();
+    })();
+  </script>
+</body>
+</html>
+# Welcome to GitHub Desktop!
+
+This is your README. READMEs are where you can communicate what your project is and how to use it.
+
+Write your name on line 6, save it, and then head back to GitHub Desktop.
